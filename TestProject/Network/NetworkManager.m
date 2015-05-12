@@ -13,16 +13,20 @@
 
 + (void)loginIn
 {
-    NSString *baseUrl = @"http://test.kmfex.com/platform/";
+  //  NSString *baseUrl = @"http://test.kmfex.com/platform/";
   //  NSString *baseUrl = @"https://kmfex-qc.hengtiansoft.com/platform/";
-   // NSString *baseUrl = @"https://www.weeex.com/platform";
+    NSString *baseUrl = @"https://www.weeex.com/platform";
     AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:baseUrl]];
   //  AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
+    AFSecurityPolicy *securityPolicy = [AFSecurityPolicy defaultPolicy];
+    securityPolicy.allowInvalidCertificates = YES;
+    
+    manager.securityPolicy = securityPolicy;
     // TODO:
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
-//    manager.requestSerializer.timeoutInterval = 30.;
-//    
+    manager.requestSerializer.timeoutInterval = 30.;
+    
     [manager.requestSerializer setValue:@"XMLHttpRequest" forHTTPHeaderField:@"X-Requested-With"];
     [manager.requestSerializer setValue:@"FAKEFORM" forHTTPHeaderField:@"x-form-id"];
     [manager.requestSerializer setValue:@"json" forHTTPHeaderField:@"dataType"];
@@ -34,10 +38,10 @@
     NSString *postUrlStr = @"app/user/login4";
     
     NSDictionary *dict = [[NSDictionary alloc] initWithObjectsAndKeys:
-                          @"psy003", @"userName",
-                          @"123456", @"password",
-//                          @"53010100170", @"userName",
-//                          @"888888", @"password",
+//                          @"psy003", @"userName",
+//                          @"123456", @"password",
+                          @"53010100170", @"userName",
+                          @"888888", @"password",
                           nil];
     
     [manager POST:postUrlStr
