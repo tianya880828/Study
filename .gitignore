@@ -1,0 +1,50 @@
+# Xcode
+#
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate
+*.DS_Store*
+
+# CocoaPods
+#
+# We recommend against adding the Pods directory to your .gitignore. However
+# you should judge for yourself, the pros and cons are mentioned at:
+# http://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control
+#
+# Pods/
+Android/HIT/bin/dexedLibs/android-support-v4-2a15c3b82ff32a5ea2031cc8f97023d3.jar
+Android/HIT/project.properties
+Android/HIT/bin/
+Android/HIT/gen/
+Android/HIT/.classpath
+Android/HIT/bin/classes/com/engagemobile/HIT/activity/LoginActivity$1.class
+*.class
+*.jar
+Android/HIT/bin/res/crunch/drawable-xhdpi/bg.png
+Android/HIT/bin/res/crunch/drawable-xhdpi/ic_middle_right.png
+Android/HIT/bin/res/crunch/drawable-xhdpi/ic_middle_left.png
+Android/HIT/bin/res/crunch/drawable-xhdpi/bg_dimension.png
+Android/HIT/bin/res/crunch/drawable-xhdpi/ic_bottom_left.png
+Android/HIT/bin/res/crunch/drawable-xhdpi/ic_bottom_right.png
+Android/HIT/bin/res/crunch/drawable-xhdpi/ic_top.png
+Android/HIT/.settings/org.eclipse.core.resources.prefs
+Android/google-play-services_lib/bin/
+Android/google-play-services_lib/.classpath
+Android/google-play-services_lib/.project
+Android/google-play-services_lib/.settings/org.eclipse.jdt.core.prefs
+Android/google-play-services_lib/gen/
+Android/google-play-services_lib/project.properties
+Android/google-play-services_lib/libs/google-play-services.jar.properties
