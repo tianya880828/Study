@@ -7,15 +7,16 @@
 //
 
 #import "NetworkManager.h"
+#import "LoginUserInfo.h"
 
 @implementation NetworkManager
 
 
 + (void)loginIn
 {
-  //  NSString *baseUrl = @"http://test.kmfex.com/platform/";
+    NSString *baseUrl = @"http://test.kmfex.com/platform/";
   //  NSString *baseUrl = @"https://kmfex-qc.hengtiansoft.com/platform/";
-    NSString *baseUrl = @"https://www.weeex.com/platform";
+  //  NSString *baseUrl = @"https://www.weeex.com/platform";
     AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:baseUrl]];
   //  AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
@@ -54,8 +55,13 @@
               NSLog(@"response Header is %@.\n", [operation.response allHeaderFields]);
               NSLog(@"responseDic is %@.\n", responseObject);
               
+              NSError *error = nil;
+              LoginUserInfo *userInfo = [[LoginUserInfo alloc] initWithDictionary:responseObject error:&error];
               
+              NSLog(@"user info: result is %@\n", userInfo.result);
               
+              NSLog(@"user info dict:%@", [userInfo toDictionary]);
+              NSLog(@"user info str:%@", [userInfo toJSONString]);
               
         
           }

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		29A60EEBDFFE19B18B6BC3AC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 088D44182C80396774282407 /* libPods.a */; };
+		423C64D01B039F99001E44B6 /* LoginUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 423C64CF1B039F99001E44B6 /* LoginUserInfo.m */; };
+		423C64D41B03A8D5001E44B6 /* NSString+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 423C64D31B03A8D5001E44B6 /* NSString+Common.m */; };
 		E50CBA991AFC83C700FDC77C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E50CBA981AFC83C700FDC77C /* main.m */; };
 		E50CBA9C1AFC83C700FDC77C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E50CBA9B1AFC83C700FDC77C /* AppDelegate.m */; };
 		E50CBA9F1AFC83C700FDC77C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E50CBA9E1AFC83C700FDC77C /* ViewController.m */; };
@@ -33,6 +35,10 @@
 
 /* Begin PBXFileReference section */
 		088D44182C80396774282407 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		423C64CE1B039F99001E44B6 /* LoginUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginUserInfo.h; path = Model/LoginUserInfo.h; sourceTree = "<group>"; };
+		423C64CF1B039F99001E44B6 /* LoginUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginUserInfo.m; path = Model/LoginUserInfo.m; sourceTree = "<group>"; };
+		423C64D21B03A8D5001E44B6 /* NSString+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Common.h"; path = "Category/NSString+Common.h"; sourceTree = "<group>"; };
+		423C64D31B03A8D5001E44B6 /* NSString+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Common.m"; path = "Category/NSString+Common.m"; sourceTree = "<group>"; };
 		43A338521F9EA6197E234B44 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		81AF288370586709608C0FFB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E50CBA931AFC83C600FDC77C /* TestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +83,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		423C64CD1B039F4B001E44B6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				423C64CE1B039F99001E44B6 /* LoginUserInfo.h */,
+				423C64CF1B039F99001E44B6 /* LoginUserInfo.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		423C64D11B03A8AB001E44B6 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				423C64D21B03A8D5001E44B6 /* NSString+Common.h */,
+				423C64D31B03A8D5001E44B6 /* NSString+Common.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
 		4E85F1CD21502B676E7C739D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +141,8 @@
 		E50CBA951AFC83C600FDC77C /* TestProject */ = {
 			isa = PBXGroup;
 			children = (
+				423C64D11B03A8AB001E44B6 /* Category */,
+				423C64CD1B039F4B001E44B6 /* Model */,
 				E563AEB31B01E32000D4EB0B /* Network */,
 				E50CBABF1AFC8F3C00FDC77C /* MVC */,
 				E50CBA9A1AFC83C700FDC77C /* AppDelegate.h */,
@@ -328,6 +354,8 @@
 				E50CBAC41AFC9F7500FDC77C /* ImageCollectionViewCell.m in Sources */,
 				E50CBA9C1AFC83C700FDC77C /* AppDelegate.m in Sources */,
 				E50CBA991AFC83C700FDC77C /* main.m in Sources */,
+				423C64D01B039F99001E44B6 /* LoginUserInfo.m in Sources */,
+				423C64D41B03A8D5001E44B6 /* NSString+Common.m in Sources */,
 				E50CBAC71AFCB7BA00FDC77C /* ShowViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
