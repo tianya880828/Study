@@ -70,7 +70,7 @@
     {
         _loginBtn = [[UIButton alloc] init];
         _loginBtn.backgroundColor = [UIColor blueColor];
-        [_loginBtn setTitle:@"登录" forState:UIControlStateNormal];
+        [_loginBtn setTitle:@"登录test" forState:UIControlStateNormal];
         
         [_loginBtn addTarget:self action:@selector(loginIn) forControlEvents:UIControlEventTouchUpInside];
     }
